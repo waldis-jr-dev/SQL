@@ -1,11 +1,10 @@
-import my_data_for_bd as my_data
+import passwords
 import mysql.connector as mysql
 
-user = my_data.user
-password = my_data.password
-database = my_data.database
-
-db = mysql.connect(host='localhost', user=user, password=password, database=database)
+db = mysql.connect(host=passwords.MYSQL_host,
+                   user=passwords.MySQL_user,
+                   password=passwords.MySQL_password,
+                   database=passwords.MySQL_database)
 cursor = db.cursor()
 
 # print funcs

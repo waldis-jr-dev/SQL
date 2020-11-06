@@ -1,10 +1,9 @@
-from Private.MySQL import my_data
+import passwords
 import mysql.connector as mysql
 
-user = my_data.db_user_name()
-password = my_data.db_user_password()
-
-db = mysql.connect(host='localhost', user=user, password=password)
+db = mysql.connect(host=passwords.MYSQL_host,
+                   user=passwords.MySQL_user,
+                   password=passwords.MySQL_password)
 cursor = db.cursor()
 
 
