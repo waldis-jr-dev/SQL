@@ -1,0 +1,1 @@
+CREATE TABLE IF NOT EXISTS test (id int primary key , name varchar(10), days int);
